@@ -1,0 +1,13 @@
+{
+    "folders": [
+        {
+            "path": "../../.."
+        },
+        {
+            "path": "../../../../../../Nuevo SOA/soaang-frontend"
+        }
+    ],
+    "settings": {
+        "liveServer.settings.multiRootWorkspaceName": "backbone"
+    }
+}

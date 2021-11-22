@@ -1,0 +1,194 @@
+// -----------------------Variables
+$primary: #cc0000;
+$gray-200: #222222;
+$gray-300: #333333;
+$gray-400: #444444;
+$gray-500: #999999;
+$gray-600: #f3f3f3;
+
+// -----------------------Navbar
+.nav {
+  background-image: linear-gradient(to top, $gray-200, $gray-400);
+  color: #fff;
+  border-bottom: 2px solid $primary;
+  &__logo {
+    min-height: 30px;
+    max-height: 40px;
+  }
+  &__text {
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    &.show::before {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 40px;
+      width: 0;
+      height: 0;
+      border-right: 5px solid transparent;
+      border-top: 5px solid transparent;
+      border-left: 5px solid transparent;
+      border-bottom: 5px solid $primary;
+    }
+  }
+}
+
+// -----------------------Breadcrums
+
+#breadcrumbs {
+  height: 35px;
+  padding-top: 6px;
+  background-color: $gray-600;
+}
+
+.breadcrumb {
+  font-size: 14px;
+  &__item {
+    font-weight: 300;
+    & a {
+      text-decoration: none;
+      color: $gray-400;
+    }
+    &::after {
+      content: ">";
+      padding-left: 5px;
+      padding-right: 5px;
+      color: $gray-400;
+    }
+    &--active {
+      color: $primary;
+      content: "";
+    }
+  }
+}
+
+// -----------------------Article
+
+.article {
+  &__title {
+    font-size: 30px;
+    font-weight: 200;
+    margin-bottom: 0px;
+  }
+  &__date {
+    color: $primary;
+    font-size: 15px;
+  }
+  &__social {
+    color: $gray-500;
+  }
+  &__parragraph {
+    font-weight: 300;
+  }
+}
+
+// -----------------------Media queries BEM
+
+@media (max-width: 991px) {
+  .nav__text {
+    display: inline-block;
+  }
+  .nav__text.show::before {
+    left: 50%;
+    right: 50%;
+  }
+  #breadcrumbs {
+    display: none;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//------------------------More SASS
+
+.carousel-indicators {
+  margin-bottom: -2rem;
+  filter: invert(100%);
+  & [data-bs-target] {
+    height: 5px;
+  }
+}
+
+@media (min-width: 991px) {
+  .carousel-indicators {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 2;
+    display: flex;
+    justify-content: end;
+    padding: 0;
+    margin-right: 0;
+    margin-bottom: -2rem;
+    margin-left: 15%;
+    list-style: none;
+    filter: invert(100%);
+    & [data-bs-target] {
+      height: 5px;
+    }
+  }
+}
+
+.nav-item {
+  height: 75px;
+  min-height: 75px;
+  max-height: 75px;
+}
+
+.navbar-dark .navbar-toggler {
+  border-color: transparent;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+  color: $gray-600;
+  font-weight: 200;
+}
+
+.dropdown-toggle::after {
+  content: "^";
+  border: 0;
+  transform: rotate(180deg);
+  padding: 9px 2px 7px 5px;
+}
+
+.navbar-nav .dropdown-menu {
+  position: sticky;
+  border-radius: 0px;
+  background-color: $gray-600;
+}
+
+.dropdown-item {
+  font-weight: 300;
+  color: $gray-300;
+  &:hover {
+    color: $gray-600;
+    background-color: $gray-500;
+    transition: all 0.4s;
+  }
+}
+
+.navbar-brand {
+  max-width: 60%;
+}
+
+
+
+
+
+
+
